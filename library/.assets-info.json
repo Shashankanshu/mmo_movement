@@ -1,0 +1,114 @@
+{
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material.meta": {
+    "time": 1635407093730.7117
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material": {
+    "time": 1635407100303.6084,
+    "uuid": "af165abf-3526-482f-a37a-f01353d1966e",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material/Wall.meta": {
+    "time": 1635407100304.2163
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material/Wall": {
+    "time": 1635407109272.7185,
+    "uuid": "6f5226bf-2a37-4fa0-91db-de3224aef4a9",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material/Wall/wall.mtl.meta": {
+    "time": 1635407109275.1475
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material/Wall/wall.mtl": {
+    "time": 1635407139373.8052,
+    "uuid": "8f4dde5f-1455-42bc-a713-79af67697c34",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script.meta": {
+    "time": 1636727379100.2253
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script": {
+    "time": 1637041497261.7607,
+    "uuid": "c5f451d2-e32c-4e5c-a4f8-af52d2af8350",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket.meta": {
+    "time": 1636727407733.1082
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket": {
+    "time": 1636960049629.8394,
+    "uuid": "a66cd5d7-1a09-4757-b209-1b778a91cbc8",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/MiloManager.ts.meta": {
+    "time": 1636727388122.947
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/MiloManager.ts": {
+    "time": 1636727388121.7058,
+    "uuid": "81952837-b513-4b6a-8020-8be425d4eccb",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/Config.ts.meta": {
+    "time": 1636727388122.9307
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/Config.ts": {
+    "time": 1637765683559.5334,
+    "uuid": "392b782c-5cbf-4b49-ac71-93191f0f14a9",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/SocketConnection.ts.meta": {
+    "time": 1636727388122.9521
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/SocketConnection.ts": {
+    "time": 1637218696510.8574,
+    "uuid": "aa55c809-fc8b-489e-b562-243a39166a97",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/Player.ts.meta": {
+    "time": 1636728584489.5596
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/Player.ts": {
+    "time": 1637771500520.2207,
+    "uuid": "35336ee6-35d2-487c-b2ed-b01a2ad16f63",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/GameManager.ts.meta": {
+    "time": 1636960049631.1514
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/GameManager.ts": {
+    "time": 1637765462383.8533,
+    "uuid": "377379e7-ce7e-4059-8abd-7f66c3d96294",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/prefab.meta": {
+    "time": 1636960129848.7556
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/prefab": {
+    "time": 1636960324192.9038,
+    "uuid": "c7206af4-c482-4356-9bc7-3971bda8d862",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/prefab/Player.prefab.meta": {
+    "time": 1636960324195.5315
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/prefab/Player.prefab": {
+    "time": 1636960327085.06,
+    "uuid": "c1028de4-55b5-43ff-a349-015e5b2973d0",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/menu.scene.meta": {
+    "time": 1636970240445.5989
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/menu.scene": {
+    "time": 1636970380017.1108,
+    "uuid": "73c8d631-2fe4-4b5d-a1da-3768414cb225",
+    "missing": false
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/gameScene.scene.meta": {
+    "time": 1635139804835.1597
+  },
+  "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/gameScene.scene": {
+    "time": 1637221668773.1045,
+    "uuid": "7713d153-7591-48ff-984c-30b65a0c8c0b",
+    "missing": false
+  }
+}

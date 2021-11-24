@@ -1,0 +1,73 @@
+2021-11-24 13:37:34-log: [Package] menu@1.0.0 enable
+2021-11-24 13:37:34-log: [Package] profile@1.0.0 enable
+2021-11-24 13:37:34-log: [Package] messages@1.0.0 enable
+2021-11-24 13:37:34-log: [Package] program@1.0.0 enable
+2021-11-24 13:37:34-log: [Package] device@1.0.1 enable
+2021-11-24 13:37:34-log: [Package] ui-kit@1.0.1 enable
+2021-11-24 13:37:34-log: [Package] tester@1.0.0 enable
+2021-11-24 13:37:34-log: [Package] preferences@1.0.0 enable
+2021-11-24 13:37:34-log: Setup mods mgr.: 269.396ms
+2021-11-24 13:37:34-log: [Package] engine@1.0.5 enable
+2021-11-24 13:37:38-log: [Package] programming@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] asset-db@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] console@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] scene@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] project@1.0.1 enable
+2021-11-24 13:37:38-log: [Package] about@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] server@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] inspector@1.0.0 enable
+2021-11-24 13:37:38-log: [Package] hierarchy@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] preview@1.0.1 enable
+2021-11-24 13:37:40-log: [Package] animator@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] builder@1.2.9 enable
+2021-11-24 13:37:40-log: [Package] node-library@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] shortcuts@1.0.1 enable
+2021-11-24 13:37:40-log: [Package] package-asset@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] reference-image@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] channel-upload-tools@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] runtime-dev-tools@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] alipay-mini-game@1.0.0 enable
+2021-11-24 13:37:40-log: [Package] android@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] baidu-mini-game@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] bytedance-mini-game@1.0.1 enable
+2021-11-24 13:37:41-log: [Package] huawei-agc@1.0.0 enable
+2021-11-24 13:37:41-warn: ios:Developer team information not found
+2021-11-24 13:37:41-warn: Command failed: xcrun security find-identity -v -p codesigning
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+2021-11-24 13:37:41-log: [Package] ios@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] ios-app-clip@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] mac@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] native@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] ohos@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] web-desktop@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] web-mobile@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] wechatgame@1.0.1 enable
+2021-11-24 13:37:41-log: [Package] windows@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] xiaomi-quick-game@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] cocos-play@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] huawei-quick-game@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] link-sure@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] oppo-mini-game@1.0.0 enable
+2021-11-24 13:37:41-log: [Package] qtt@1.0.0 enable
+2021-11-24 13:37:42-log: [Package] vivo-mini-game@1.0.0 enable
+2021-11-24 13:37:42-log: [Package] cocos-service@3.0.1 enable
+2021-11-24 13:37:42-log: [Package] importer@1.0.0 enable
+2021-11-24 13:37:42-log: [Package] extension@3.0.9 enable
+2021-11-24 13:37:42-log: [Package] im-plugin@3.0.6 enable
+2021-11-24 13:37:42-log: [Package] lightmap@1.0.3 enable
+2021-11-24 13:37:42-log: [Package] colyseus-sdk@0.14.0 enable
+2021-11-24 13:37:43-warn: Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+2021-11-24 13:37:43-log: [Scene] begin init
+2021-11-24 13:37:43-log: [Scene] require engine end
+2021-11-24 13:37:43-log: [Scene] Serialize end
+2021-11-24 13:37:43-log: [Scene] configureStartup end
+2021-11-24 13:37:43-info: [Scene] WebGL2 device initialized.
+2021-11-24 13:37:43-log: [Scene] Cocos Creator v3.3.1
+2021-11-24 13:37:43-info: [Scene] Forward render pipeline initialized.
+2021-11-24 13:37:43-log: [Scene] openEngine end
+2021-11-24 13:37:43-log: [Scene] configureEngine end

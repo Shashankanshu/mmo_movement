@@ -1,0 +1,22 @@
+{
+  "uuid": {
+    "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/water.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0",
+      "c27720ba-f63b-4f85-b7f7-30eedf0139ee"
+    ],
+    "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/effects/material.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "60f7195c-ec2a-45eb-ba94-8955f60e81d0"
+    ],
+    "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/effects/water.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319",
+      "c27720ba-f63b-4f85-b7f7-30eedf0139ee",
+      "a2229c0c-e0d2-4a8a-aada-f52bdddffacf"
+    ],
+    "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Material/Wall/wall.mtl": [
+      "1baf0fc9-befa-459c-8bdd-af1a450a0319"
+    ]
+  },
+  "path": {}
+}

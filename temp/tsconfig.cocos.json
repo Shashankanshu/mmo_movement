@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "strict": true,
+    "types": [
+      "./temp/declarations/jsb",
+      "./temp/declarations/cc.env",
+      "./temp/declarations/cc"
+    ],
+    "paths": {
+      "db://internal/*": [
+        "/Applications/CocosCreator/Creator/3.3.1/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/*"
+      ],
+      "db://assets/*": [
+        "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/*"
+      ],
+      "db://colyseus-sdk/*": [
+        "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/extensions/colyseus-sdk/runtime/*"
+      ]
+    },
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

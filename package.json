@@ -1,0 +1,12 @@
+{
+  "name": "3dDemoGame",
+  "type": "3d",
+  "uuid": "c3f4fb39-a4e1-453a-955c-a1f55f82f375",
+  "version": "3.3.1",
+  "creator": {
+    "version": "3.3.1"
+  },
+  "dependencies": {
+    "jsoncomp": "^1.6.1"
+  }
+}
