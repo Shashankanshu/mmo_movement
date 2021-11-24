@@ -141,7 +141,6 @@ export class GameManager extends SocketConnection {
             default:
                 break;
         }
-        this.selfplayer.clearLoop();
     }
 
     addPlayerToWorld(player, sessionId) {

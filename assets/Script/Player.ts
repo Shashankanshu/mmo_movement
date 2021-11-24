@@ -6,17 +6,19 @@ const { ccclass, property } = _decorator;
 @ccclass('Player')
 export class Player extends Component {
 
-    positonStack: Vec3[] = [];
+    livePos: Vec3 = new Vec3(0, 0);
+
+    positonQueue: Vec3[] = [];
     startPos: Vec3;
     endPos: Vec3;
 
-    frames = 0;
     // To fetch coordinate from pool
-    maxFrames = Config.gameFps / Config.dataPerSec;
+    queueFrameCount = 0;
+    maxQueueFrames = Config.gameFps / Config.dataPerSec;
 
-
-    speed = Config.moveSpeed;
-    livePos: Vec3 = new Vec3(0, 0);
+    // To move the character
+    moveTimeFrameCount = 0;
+    moveTimeFrames = Config.moveTimeByFrame;
 
     start() {
         this.startPos = new Vec3(this.node.position.x, this.node.position.y, this.node.position.z);
@@ -27,46 +29,48 @@ export class Player extends Component {
     }
 
     onPositionUpdate(plyr) {
-        if (this.positonStack.length < 1)
-            this.positonStack.push(new Vec3(plyr.x, plyr.y, plyr.z));
+        if (this.positonQueue.length < 1)
+            this.positonQueue.push(new Vec3(plyr.x, plyr.y, plyr.z));
         // this.node.position = new Vec3(plyr.x, plyr.y, plyr.z);
-    }
-
-    clearLoop() {
-        return;
-        if (this.positonStack.length)
-            this.livePos = this.positonStack.shift();
-        this.positonStack.length = 0;
     }
 
     updatePosition(dt) {
 
-        if (this.frames > this.maxFrames) {
+        if (this.queueFrameCount > this.maxQueueFrames) {
 
-            if (this.positonStack.length == 0)
+            if (this.positonQueue.length == 0)
                 return;
 
             // let diffX = this.endPos.x - this.node.position.x;
 
             // this.startPos = new Vec3(this.node.position.x, this.node.position.y, this.node.position.z);
-            // this.endPos = this.positonStack.shift();
+            // this.endPos = this.positonQueue.shift();
 
-            this.positonStack.shift();
+            this.positonQueue.shift();
 
-            this.startPos = new Vec3(0, 0, 0);
-            this.endPos = new Vec3(5, 0, 0);
+            this.startPos = new Vec3(0, 2, 0);
+            this.endPos = new Vec3(5, 2, 0);
 
             // log('SartPos- ', this.startPos.x);
             // log('EndPos- ', this.endPos.x);
 
             // this.endPos.x -= diffX;
 
-            this.frames = 0;
+            this.queueFrameCount = 1;
+            this.moveTimeFrameCount = 1;
         }
 
-        let pos = Vec3.lerp(new Vec3(), this.startPos, this.endPos, this.frames / this.maxFrames);
-        log(pos.x);
-        this.node.position = pos;
-        ++this.frames;
+        if (this.moveTimeFrameCount < this.moveTimeFrames + 1) {
+
+            let pos = Vec3.lerp(new Vec3(), this.startPos, this.endPos, this.moveTimeFrameCount / this.moveTimeFrames);
+            log(pos.x);
+            this.node.position = pos;
+
+        }
+
+        ++this.moveTimeFrameCount;
+        ++this.queueFrameCount;
+
+
     }
 }

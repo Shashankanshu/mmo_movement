@@ -34,7 +34,7 @@ export const Config = {
         "quittingPoint": -50,
         "losingPoint": -20
     },
-    dataPerSec: 10,
     gameFps: 60,
-    moveSpeed: 10
+    dataPerSec: 10,
+    moveTimeByFrame: 10
 };
