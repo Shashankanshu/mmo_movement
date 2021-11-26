@@ -1,9 +1,11 @@
 
-import { _decorator, Prefab, instantiate, Vec3, EventKeyboard, systemEvent, SystemEvent, KeyCode, log, macro, Label } from 'cc';
+import { _decorator, Prefab, instantiate, Vec3, EventKeyboard, systemEvent, SystemEvent, KeyCode, log, macro, Label, Vec2 } from 'cc';
 import { Player } from '../Player';
 import { Config } from './Config';
 import { SocketConnection } from './SocketConnection';
 const { ccclass, property } = _decorator;
+
+const CELL_TIME = 0.016;
 
 @ccclass('GameManager')
 export class GameManager extends SocketConnection {
@@ -33,21 +35,18 @@ export class GameManager extends SocketConnection {
     selfplayer: Player;
 
     isReady = false;
-    speed = 1;
+    speed = 2;
 
-    onLoad() {
-        // this.addPlayerToWorld({ x: 0, y: 2, z: 0 }, 'abcdefghij');
-        // this.schedule(this.showFps, 1 / 120, macro.REPEAT_FOREVER);
-        // setInterval(this.showFps.bind(this), 1000 / 60);
 
-        if (typeof window['gameManager'] !== 'undefined') {
-            try {
-                window['gameManager'].onGameStart()
-            } catch (err) {
-                window['gameManager'].onError(err.stack.toString())
-            }
-        }
-    }
+
+    private _currentPlayerPosition: Vec3 = Vec3.ZERO;
+    private _vector: Vec3 = Vec3.ZERO;
+    private _vectorAngle: Vec3 = Vec3.ZERO;
+    private _now_time = 0;
+    public _charName: string = "LOL";
+
+    public eatTimeout = null;
+    public gameController = null;
 
     start() {
         super.start();
@@ -66,14 +65,6 @@ export class GameManager extends SocketConnection {
             return;
 
         let player = this.playerMap[this.room.sessionId];
-        /* this.send({
-            command: 'PLAYER_POS',
-            data: {
-                x: player.node.position.x,
-                y: player.node.position.y,
-                z: player.node.position.z,
-            }
-        }); */
         this.send({
             command: 'PLAYER_POS',
             data: {
@@ -82,65 +73,6 @@ export class GameManager extends SocketConnection {
                 z: player.livePos.z,
             }
         });
-
-        /* log({
-            x: player.livePos.x,
-            y: player.livePos.y,
-            z: player.livePos.z,
-        }); */
-
-    }
-
-    onKeyDown(event: EventKeyboard) {
-
-        switch (event.keyCode) {
-
-            case KeyCode.ARROW_LEFT:
-                this.activeKey.left = 1;
-                break;
-
-            case KeyCode.ARROW_UP:
-                this.activeKey.up = 1;
-                break;
-
-            case KeyCode.ARROW_RIGHT:
-                this.activeKey.right = 1;
-                break;
-
-            case KeyCode.ARROW_DOWN:
-                this.activeKey.down = 1;
-                break;
-
-            default:
-                break;
-        }
-
-        log('key press');
-
-    }
-
-    onKeyUp(event: EventKeyboard) {
-        switch (event.keyCode) {
-
-            case KeyCode.ARROW_LEFT:
-                this.activeKey.left = 0;
-                break;
-
-            case KeyCode.ARROW_UP:
-                this.activeKey.up = 0;
-                break;
-
-            case KeyCode.ARROW_RIGHT:
-                this.activeKey.right = 0;
-                break;
-
-            case KeyCode.ARROW_DOWN:
-                this.activeKey.down = 0;
-                break;
-
-            default:
-                break;
-        }
     }
 
     addPlayerToWorld(player, sessionId) {
@@ -174,6 +106,10 @@ export class GameManager extends SocketConnection {
         this.fps = 1 / this.delta;
 
         this.fpsText.string = Math.floor(this.fps) + '';
+    }
+
+    touchCallBack(vector: Vec3, angle: number) {
+        // this.selfplayer.touchCallBack(vector, angle);
     }
 
     updatePosition() {
@@ -217,6 +153,119 @@ export class GameManager extends SocketConnection {
             this.sendPlayerUpdate();
         }
 
+    }
+
+
+
+    fix_update(dt: number) {
+
+        this.updateNamePos();
+
+        if (this._currentState == STATE.BUMP) {
+            let vec = new Vec3();
+            this.node.getComponent(RigidBody).getLinearVelocity(vec);
+            let mag = Math.sqrt(vec.x * vec.x + vec.z * vec.z);
+
+            if (mag <= 0.2) {
+
+                this.getComponent(RigidBodyComponent).clearVelocity();
+                this.setIdleStateAnimation();
+
+            } else
+                return;
+
+        }
+
+        if (this._vector.lengthSqr() > 0) {
+            if (this._currentState == STATE.IDLE) {
+                this.setWalkStateAnimation();
+            }
+
+            this.node.setPosition(this.node.position.add3f(this._vector.x * this.speed * dt, 0, -this._vector.y * this.speed * dt));
+
+            this._currentPlayerPosition = new Vec3(this._vector.x, 0, this._vector.y);
+
+            this.playerCamera.setPosition(this.playerCamera.position.add3f(this._vector.x * this.speed * dt, 0, 0));
+
+            // this.updateNamePos();
+        }
+        else {
+            if (this._currentState == STATE.WALK) {
+                this.setIdleStateAnimation();
+            }
+            // this.node.setPosition(this.node.position.add3f(this._currentPlayerPosition.x * this.speed * dt, 0, -this._currentPlayerPosition.z * this.speed * dt));
+
+        }
+
+        /* if (this._vectorAngle.lengthSqr() > 0) {
+            this.playerCamera.eulerAngles = this.playerCamera.eulerAngles.add3f(0, -this._vectorAngle.x, 0);
+        } */
+    }
+
+    update(deltaTime: number) {
+
+        if (!this.isReady)
+            return;
+
+        this._now_time += deltaTime;
+
+        while (this._now_time >= CELL_TIME) {
+
+            this.fix_update(CELL_TIME);
+            this.updateCamera();
+
+            this._now_time -= CELL_TIME;
+        }
+    }
+
+
+    onKeyDown(event: EventKeyboard) {
+
+        switch (event.keyCode) {
+
+            case KeyCode.ARROW_LEFT:
+                this.activeKey.left = 1;
+                break;
+
+            case KeyCode.ARROW_UP:
+                this.activeKey.up = 1;
+                break;
+
+            case KeyCode.ARROW_RIGHT:
+                this.activeKey.right = 1;
+                break;
+
+            case KeyCode.ARROW_DOWN:
+                this.activeKey.down = 1;
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    onKeyUp(event: EventKeyboard) {
+        switch (event.keyCode) {
+
+            case KeyCode.ARROW_LEFT:
+                this.activeKey.left = 0;
+                break;
+
+            case KeyCode.ARROW_UP:
+                this.activeKey.up = 0;
+                break;
+
+            case KeyCode.ARROW_RIGHT:
+                this.activeKey.right = 0;
+                break;
+
+            case KeyCode.ARROW_DOWN:
+                this.activeKey.down = 0;
+                break;
+
+            default:
+                break;
+        }
     }
 
 }

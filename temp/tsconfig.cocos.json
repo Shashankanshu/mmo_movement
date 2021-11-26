@@ -6,18 +6,18 @@
     "strict": true,
     "types": [
       "./temp/declarations/jsb",
-      "./temp/declarations/cc.env",
-      "./temp/declarations/cc"
+      "./temp/declarations/cc",
+      "./temp/declarations/cc.env"
     ],
     "paths": {
       "db://internal/*": [
-        "/Applications/CocosCreator/Creator/3.3.1/CocosCreator.app/Contents/Resources/resources/3d/engine/editor/assets/*"
+        "C:\\CocosDashboard_1.0.14\\resources\\.editors\\Creator\\3.3.1\\resources\\resources\\3d\\engine\\editor\\assets\\*"
       ],
       "db://assets/*": [
-        "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/*"
+        "D:\\Office\\mmo_movement\\assets\\*"
       ],
       "db://colyseus-sdk/*": [
-        "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/extensions/colyseus-sdk/runtime/*"
+        "D:\\Office\\mmo_movement\\extensions\\colyseus-sdk\\runtime\\*"
       ]
     },
     "experimentalDecorators": true,

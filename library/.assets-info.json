@@ -110,5 +110,125 @@
     "time": 1637221668773.1045,
     "uuid": "7713d153-7591-48ff-984c-30b65a0c8c0b",
     "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\gameScene.scene": {
+    "time": 1637918739057.2444,
+    "uuid": "7713d153-7591-48ff-984c-30b65a0c8c0b",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Material": {
+    "time": 1637774000858.925,
+    "uuid": "af165abf-3526-482f-a37a-f01353d1966e",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\menu.scene": {
+    "time": 1637774000866.6294,
+    "uuid": "73c8d631-2fe4-4b5d-a1da-3768414cb225",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\prefab": {
+    "time": 1637774000867.6316,
+    "uuid": "c7206af4-c482-4356-9bc7-3971bda8d862",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script": {
+    "time": 1637918278697.1523,
+    "uuid": "c5f451d2-e32c-4e5c-a4f8-af52d2af8350",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Material\\Wall": {
+    "time": 1637774000860.124,
+    "uuid": "6f5226bf-2a37-4fa0-91db-de3224aef4a9",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\prefab\\Player.prefab": {
+    "time": 1637774000867.6316,
+    "uuid": "c1028de4-55b5-43ff-a349-015e5b2973d0",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\Player.ts": {
+    "time": 1637921775019.3896,
+    "uuid": "35336ee6-35d2-487c-b2ed-b01a2ad16f63",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket": {
+    "time": 1637774000864.5215,
+    "uuid": "a66cd5d7-1a09-4757-b209-1b778a91cbc8",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Material\\Wall\\wall.mtl": {
+    "time": 1637774186959.0076,
+    "uuid": "8f4dde5f-1455-42bc-a713-79af67697c34",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\Config.ts": {
+    "time": 1637776197682.6084,
+    "uuid": "392b782c-5cbf-4b49-ac71-93191f0f14a9",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\GameManager.ts": {
+    "time": 1637921728955.2996,
+    "uuid": "377379e7-ce7e-4059-8abd-7f66c3d96294",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\MiloManager.ts": {
+    "time": 1637774000863.532,
+    "uuid": "81952837-b513-4b6a-8020-8be425d4eccb",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\SocketConnection.ts": {
+    "time": 1637774000864.5215,
+    "uuid": "aa55c809-fc8b-489e-b562-243a39166a97",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\assets\\Material.meta": {
+    "time": 1637774000858.925
+  },
+  "D:\\Office\\mmo_movement\\assets\\prefab.meta": {
+    "time": 1637774000866.6294
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script.meta": {
+    "time": 1637774000860.124
+  },
+  "D:\\Office\\mmo_movement\\assets\\Material\\Wall.meta": {
+    "time": 1637774000858.925
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket.meta": {
+    "time": 1637774000861.1372
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\Player.ts.meta": {
+    "time": 1637774000861.1372
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\Config.ts.meta": {
+    "time": 1637774000862.5198
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\GameManager.ts.meta": {
+    "time": 1637774000863.532
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\MiloManager.ts.meta": {
+    "time": 1637774000863.532
+  },
+  "D:\\Office\\mmo_movement\\assets\\Material\\Wall\\wall.mtl.meta": {
+    "time": 1637774000860.124
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\socket\\SocketConnection.ts.meta": {
+    "time": 1637774000864.5215
+  },
+  "D:\\Office\\mmo_movement\\assets\\prefab\\Player.prefab.meta": {
+    "time": 1637774000867.6316
+  },
+  "D:\\Office\\mmo_movement\\assets\\menu.scene.meta": {
+    "time": 1637774000866.6294
+  },
+  "D:\\Office\\mmo_movement\\assets\\gameScene.scene.meta": {
+    "time": 1637774000865.532
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\TouchController.ts.meta": {
+    "time": 1637918278705.1538
+  },
+  "D:\\Office\\mmo_movement\\assets\\Script\\TouchController.ts": {
+    "time": 1637921170527.5237,
+    "uuid": "6f3ce520-c6ad-4769-aa47-f2cc8733c45a",
+    "missing": false
   }
 }

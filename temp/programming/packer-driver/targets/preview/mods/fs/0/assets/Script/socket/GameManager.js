@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, _decorator, Prefab, instantiate, Vec3, systemEvent, SystemEvent, KeyCode, log, Label, Config, SocketConnection, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, GameManager;
+  var _reporterNs, _cclegacy, _decorator, Prefab, instantiate, Vec3, systemEvent, SystemEvent, KeyCode, Label, Vec2, Config, SocketConnection, _dec, _dec2, _dec3, _class, _class2, _descriptor, _descriptor2, _temp, _crd, ccclass, property, CELL_TIME, GameManager;
 
   function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -41,8 +41,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       systemEvent = _cc.systemEvent;
       SystemEvent = _cc.SystemEvent;
       KeyCode = _cc.KeyCode;
-      log = _cc.log;
       Label = _cc.Label;
+      Vec2 = _cc.Vec2;
     }, function (_unresolved_2) {
       Config = _unresolved_2.Config;
     }, function (_unresolved_3) {
@@ -55,6 +55,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
       ccclass = _decorator.ccclass;
       property = _decorator.property;
+      CELL_TIME = 0.016;
 
       _export("GameManager", GameManager = (_dec = ccclass('GameManager'), _dec2 = property({
         type: Prefab
@@ -99,25 +100,26 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           _defineProperty(_assertThisInitialized(_this), "isReady", false);
 
-          _defineProperty(_assertThisInitialized(_this), "speed", 1);
+          _defineProperty(_assertThisInitialized(_this), "speed", 2);
+
+          _defineProperty(_assertThisInitialized(_this), "_currentPlayerPosition", Vec3.ZERO);
+
+          _defineProperty(_assertThisInitialized(_this), "_vector", Vec3.ZERO);
+
+          _defineProperty(_assertThisInitialized(_this), "_vectorAngle", Vec3.ZERO);
+
+          _defineProperty(_assertThisInitialized(_this), "_now_time", 0);
+
+          _defineProperty(_assertThisInitialized(_this), "_charName", "LOL");
+
+          _defineProperty(_assertThisInitialized(_this), "eatTimeout", null);
+
+          _defineProperty(_assertThisInitialized(_this), "gameController", null);
 
           return _this;
         }
 
         var _proto = GameManager.prototype;
-
-        _proto.onLoad = function onLoad() {
-          // this.addPlayerToWorld({ x: 0, y: 2, z: 0 }, 'abcdefghij');
-          // this.schedule(this.showFps, 1 / 120, macro.REPEAT_FOREVER);
-          // setInterval(this.showFps.bind(this), 1000 / 60);
-          if (typeof window['gameManager'] !== 'undefined') {
-            try {
-              window['gameManager'].onGameStart();
-            } catch (err) {
-              window['gameManager'].onError(err.stack.toString());
-            }
-          }
-        };
 
         _proto.start = function start() {
           _ref.prototype.start.call(this);
@@ -134,15 +136,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         _proto.sendPlayerUpdate = function sendPlayerUpdate() {
           if (!this.isConnected) return;
           var player = this.playerMap[this.room.sessionId];
-          /* this.send({
-              command: 'PLAYER_POS',
-              data: {
-                  x: player.node.position.x,
-                  y: player.node.position.y,
-                  z: player.node.position.z,
-              }
-          }); */
-
           this.send({
             command: 'PLAYER_POS',
             data: {
@@ -151,61 +144,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
               z: player.livePos.z
             }
           });
-          /* log({
-              x: player.livePos.x,
-              y: player.livePos.y,
-              z: player.livePos.z,
-          }); */
-        };
-
-        _proto.onKeyDown = function onKeyDown(event) {
-          switch (event.keyCode) {
-            case KeyCode.ARROW_LEFT:
-              this.activeKey.left = 1;
-              break;
-
-            case KeyCode.ARROW_UP:
-              this.activeKey.up = 1;
-              break;
-
-            case KeyCode.ARROW_RIGHT:
-              this.activeKey.right = 1;
-              break;
-
-            case KeyCode.ARROW_DOWN:
-              this.activeKey.down = 1;
-              break;
-
-            default:
-              break;
-          }
-
-          log('key press');
-        };
-
-        _proto.onKeyUp = function onKeyUp(event) {
-          switch (event.keyCode) {
-            case KeyCode.ARROW_LEFT:
-              this.activeKey.left = 0;
-              break;
-
-            case KeyCode.ARROW_UP:
-              this.activeKey.up = 0;
-              break;
-
-            case KeyCode.ARROW_RIGHT:
-              this.activeKey.right = 0;
-              break;
-
-            case KeyCode.ARROW_DOWN:
-              this.activeKey.down = 0;
-              break;
-
-            default:
-              break;
-          }
-
-          this.selfplayer.clearLoop();
         };
 
         _proto.addPlayerToWorld = function addPlayerToWorld(player, sessionId) {
@@ -236,6 +174,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           this.lastCalledTime = Date.now();
           this.fps = 1 / this.delta;
           this.fpsText.string = Math.floor(this.fps) + '';
+        };
+
+        _proto.touchCallBack = function touchCallBack(vector, angle) {// this.selfplayer.touchCallBack(vector, angle);
         };
 
         _proto.updatePosition = function updatePosition() {
@@ -273,6 +214,103 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           if (this.activeKey.up || this.activeKey.down || this.activeKey.left || this.activeKey.right) {
             this.sendPlayerUpdate();
+          }
+        };
+
+        _proto.fix_update = function fix_update(dt) {
+          this.updateNamePos();
+
+          if (this._currentState == STATE.BUMP) {
+            var vec = new Vec3();
+            this.node.getComponent(RigidBody).getLinearVelocity(vec);
+            var mag = Math.sqrt(vec.x * vec.x + vec.z * vec.z);
+
+            if (mag <= 0.2) {
+              this.getComponent(RigidBodyComponent).clearVelocity();
+              this.setIdleStateAnimation();
+            } else return;
+          }
+
+          if (this._vector.lengthSqr() > 0) {
+            if (this._currentState == STATE.IDLE) {
+              this.setWalkStateAnimation();
+            }
+
+            this.node.setPosition(this.node.position.add3f(this._vector.x * this.speed * dt, 0, -this._vector.y * this.speed * dt));
+            this._currentPlayerPosition = new Vec3(this._vector.x, 0, this._vector.y);
+            this.playerCamera.setPosition(this.playerCamera.position.add3f(this._vector.x * this.speed * dt, 0, 0)); // this.updateNamePos();
+          } else {
+            if (this._currentState == STATE.WALK) {
+              this.setIdleStateAnimation();
+            } // this.node.setPosition(this.node.position.add3f(this._currentPlayerPosition.x * this.speed * dt, 0, -this._currentPlayerPosition.z * this.speed * dt));
+
+          }
+          /* if (this._vectorAngle.lengthSqr() > 0) {
+              this.playerCamera.eulerAngles = this.playerCamera.eulerAngles.add3f(0, -this._vectorAngle.x, 0);
+          } */
+
+        };
+
+        _proto.updateCamera = function updateCamera() {
+          var target_position = new Vec2(this.node.getPosition().x, this.node.getPosition().z);
+          target_position.lerp(target_position, 0.1);
+          this.playerCamera.setPosition(new Vec3(target_position.x, this.node.getPosition().y, target_position.y));
+        };
+
+        _proto.update = function update(deltaTime) {
+          if (!this.isReady) return;
+          this._now_time += deltaTime;
+
+          while (this._now_time >= CELL_TIME) {
+            this.fix_update(CELL_TIME);
+            this.updateCamera();
+            this._now_time -= CELL_TIME;
+          }
+        };
+
+        _proto.onKeyDown = function onKeyDown(event) {
+          switch (event.keyCode) {
+            case KeyCode.ARROW_LEFT:
+              this.activeKey.left = 1;
+              break;
+
+            case KeyCode.ARROW_UP:
+              this.activeKey.up = 1;
+              break;
+
+            case KeyCode.ARROW_RIGHT:
+              this.activeKey.right = 1;
+              break;
+
+            case KeyCode.ARROW_DOWN:
+              this.activeKey.down = 1;
+              break;
+
+            default:
+              break;
+          }
+        };
+
+        _proto.onKeyUp = function onKeyUp(event) {
+          switch (event.keyCode) {
+            case KeyCode.ARROW_LEFT:
+              this.activeKey.left = 0;
+              break;
+
+            case KeyCode.ARROW_UP:
+              this.activeKey.up = 0;
+              break;
+
+            case KeyCode.ARROW_RIGHT:
+              this.activeKey.right = 0;
+              break;
+
+            case KeyCode.ARROW_DOWN:
+              this.activeKey.down = 0;
+              break;
+
+            default:
+              break;
           }
         };
 

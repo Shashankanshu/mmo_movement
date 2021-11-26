@@ -1,6 +1,6 @@
 {
   "cce:/internal/x/cc": {
-    "mTimestamp": 6511.616982996464,
+    "mTimestamp": 6923.632199999876,
     "chunkId": "quick-pack:/cce/internal/x/cc.js",
     "imports": [
       {
@@ -443,11 +443,11 @@
     ]
   },
   "cce:/internal/x/prerequisite-imports": {
-    "mTimestamp": 32531063.14690298,
+    "mTimestamp": 8909864.310999999,
     "chunkId": "quick-pack:/cce/internal/x/prerequisite-imports.js",
     "imports": [
       {
-        "value": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/Player.ts",
+        "value": "file:///D:/Office/mmo_movement/assets/Script/Player.ts",
         "rewritten": "__unresolved_0",
         "loc": {
           "start": {
@@ -456,12 +456,12 @@
           },
           "end": {
             "line": 4,
-            "column": 90
+            "column": 63
           }
         }
       },
       {
-        "value": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/Config.ts",
+        "value": "file:///D:/Office/mmo_movement/assets/Script/TouchController.ts",
         "rewritten": "__unresolved_1",
         "loc": {
           "start": {
@@ -470,12 +470,12 @@
           },
           "end": {
             "line": 5,
-            "column": 97
+            "column": 72
           }
         }
       },
       {
-        "value": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/GameManager.ts",
+        "value": "file:///D:/Office/mmo_movement/assets/Script/socket/Config.ts",
         "rewritten": "__unresolved_2",
         "loc": {
           "start": {
@@ -484,12 +484,12 @@
           },
           "end": {
             "line": 6,
-            "column": 102
+            "column": 70
           }
         }
       },
       {
-        "value": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/MiloManager.ts",
+        "value": "file:///D:/Office/mmo_movement/assets/Script/socket/GameManager.ts",
         "rewritten": "__unresolved_3",
         "loc": {
           "start": {
@@ -498,12 +498,12 @@
           },
           "end": {
             "line": 7,
-            "column": 102
+            "column": 75
           }
         }
       },
       {
-        "value": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/SocketConnection.ts",
+        "value": "file:///D:/Office/mmo_movement/assets/Script/socket/MiloManager.ts",
         "rewritten": "__unresolved_4",
         "loc": {
           "start": {
@@ -512,12 +512,12 @@
           },
           "end": {
             "line": 8,
-            "column": 107
+            "column": 75
           }
         }
       },
       {
-        "value": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/extensions/colyseus-sdk/runtime/colyseus.js",
+        "value": "file:///D:/Office/mmo_movement/assets/Script/socket/SocketConnection.ts",
         "rewritten": "__unresolved_5",
         "loc": {
           "start": {
@@ -526,7 +526,21 @@
           },
           "end": {
             "line": 9,
-            "column": 110
+            "column": 80
+          }
+        }
+      },
+      {
+        "value": "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.js",
+        "rewritten": "__unresolved_6",
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 7
+          },
+          "end": {
+            "line": 10,
+            "column": 83
           }
         }
       }
@@ -537,27 +551,31 @@
     "resolvedImports": [
       {
         "isExternal": false,
-        "url": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/Player.ts"
+        "url": "file:///D:/Office/mmo_movement/assets/Script/Player.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/Config.ts"
+        "url": "file:///D:/Office/mmo_movement/assets/Script/TouchController.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/GameManager.ts"
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/Config.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/MiloManager.ts"
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/GameManager.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/assets/Script/socket/SocketConnection.ts"
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/MiloManager.ts"
       },
       {
         "isExternal": false,
-        "url": "file:///Users/shashankchaurasia/CocosWorkspace/3dDemoGame/extensions/colyseus-sdk/runtime/colyseus.mjs?cjs=&original=.js"
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/SocketConnection.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.mjs?cjs=&original=.js"
       }
     ]
   },
@@ -659,7 +677,7 @@
     ]
   },
   "cce:/internal/code-quality/cr.mjs": {
-    "mTimestamp": 1637741251888,
+    "mTimestamp": 1637919540886,
     "chunkId": "quick-pack:/cce/internal/code-quality/cr.js",
     "imports": [],
     "modLoMetadata": {
@@ -936,7 +954,7 @@
     ]
   },
   "cce:/internal/ml/cjs-loader.mjs": {
-    "mTimestamp": 1637741251888,
+    "mTimestamp": 1637919540886,
     "chunkId": "quick-pack:/cce/internal/ml/cjs-loader.js",
     "imports": [],
     "modLoMetadata": {
@@ -1190,6 +1208,423 @@
           "end": {
             "line": 2,
             "column": 110
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/assets/Script/Player.ts": {
+    "mTimestamp": 1637921775019.3896,
+    "chunkId": "assets/Script/Player.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 85
+          },
+          "end": {
+            "line": 2,
+            "column": 89
+          }
+        }
+      },
+      {
+        "value": "./socket/Config",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 23
+          },
+          "end": {
+            "line": 3,
+            "column": 40
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/Config.ts"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/assets/Script/socket/GameManager.ts": {
+    "mTimestamp": 1637921728955.2996,
+    "chunkId": "assets/Script/socket/GameManager.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 129
+          },
+          "end": {
+            "line": 2,
+            "column": 133
+          }
+        }
+      },
+      {
+        "value": "./Config",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 23
+          },
+          "end": {
+            "line": 4,
+            "column": 33
+          }
+        }
+      },
+      {
+        "value": "./SocketConnection",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 33
+          },
+          "end": {
+            "line": 5,
+            "column": 53
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/Config.ts"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/assets/Script/socket/SocketConnection.ts"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/assets/Script/socket/MiloManager.ts": {
+    "mTimestamp": 1637774000863.532,
+    "chunkId": "assets/Script/socket/MiloManager.js",
+    "imports": [
+      {
+        "value": "cc"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/assets/Script/socket/Config.ts": {
+    "mTimestamp": 1637776197682.6084,
+    "chunkId": "assets/Script/socket/Config.js",
+    "imports": [
+      {
+        "value": "cc"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/assets/Script/socket/SocketConnection.ts": {
+    "mTimestamp": 1637774000864.5215,
+    "chunkId": "assets/Script/socket/SocketConnection.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 70
+          },
+          "end": {
+            "line": 2,
+            "column": 74
+          }
+        }
+      },
+      {
+        "value": "db://colyseus-sdk/colyseus.js",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 21
+          },
+          "end": {
+            "line": 3,
+            "column": 52
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/x/cc"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.mjs?cjs=&original=.js"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.mjs?cjs=&original=.js": {
+    "mTimestamp": 1637774000872.8977,
+    "chunkId": "extensions/colyseus-sdk/runtime/colyseus.proxy.js?cjs&original=.js",
+    "imports": [
+      {
+        "value": "cce:/internal/code-quality/cr.mjs",
+        "rewritten": "__unresolved_0"
+      },
+      {
+        "value": "./colyseus.js",
+        "rewritten": "__unresolved_1",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 36
+          },
+          "end": {
+            "line": 2,
+            "column": 51
+          }
+        }
+      },
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_2",
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 19
+          },
+          "end": {
+            "line": 3,
+            "column": 52
+          }
+        }
+      },
+      {
+        "value": "./colyseus.js",
+        "rewritten": "__unresolved_3",
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 14
+          },
+          "end": {
+            "line": 8,
+            "column": 29
+          }
+        }
+      },
+      {
+        "value": "./colyseus.js",
+        "rewritten": "__unresolved_4",
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 29
+          },
+          "end": {
+            "line": 9,
+            "column": 44
+          }
+        }
+      }
+    ],
+    "modLoMetadata": {
+      "type": "esm"
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/code-quality/cr.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.js"
+      },
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.js"
+      },
+      {
+        "isExternal": false,
+        "url": "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.js"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/extensions/colyseus-sdk/runtime/colyseus.js": {
+    "mTimestamp": 1637774000872.8977,
+    "chunkId": "extensions/colyseus-sdk/runtime/colyseus.js",
+    "imports": [
+      {
+        "value": "cce:/internal/ml/cjs-loader.mjs",
+        "rewritten": "__unresolved_0"
+      }
+    ],
+    "modLoMetadata": {
+      "type": "cjs",
+      "cjs": {
+        "exports": [
+          "Protocol",
+          "ErrorCode",
+          "OPERATION",
+          "ArraySchema",
+          "CollectionSchema",
+          "Context",
+          "MapSchema",
+          "Reflection",
+          "ReflectionField",
+          "ReflectionType",
+          "Schema",
+          "SchemaDefinition",
+          "SetSchema",
+          "decode",
+          "defineTypes",
+          "deprecated",
+          "dumpChanges",
+          "encode",
+          "filter",
+          "filterChildren",
+          "hasFilter",
+          "registerType",
+          "type",
+          "__esModule",
+          "Platform",
+          "Auth",
+          "Client",
+          "Room",
+          "SchemaSerializer",
+          "registerSerializer"
+        ],
+        "reexports": []
+      }
+    },
+    "resolvedImports": [
+      {
+        "isExternal": false,
+        "url": "cce:/internal/ml/cjs-loader.mjs"
+      }
+    ]
+  },
+  "file:///D:/Office/mmo_movement/assets/Script/TouchController.ts": {
+    "mTimestamp": 1637921170527.5237,
+    "chunkId": "assets/Script/TouchController.js",
+    "imports": [
+      {
+        "value": "cc"
+      },
+      {
+        "value": "cc",
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 99
+          },
+          "end": {
+            "line": 2,
+            "column": 103
           }
         }
       }

@@ -14,5 +14,21 @@
   },
   "/Users/shashankchaurasia/CocosWorkspace/3dDemoGame/extensions/colyseus-sdk/runtime/colyseus.js.meta": {
     "time": 1623097615000
+  },
+  "D:\\Office\\mmo_movement\\extensions\\colyseus-sdk\\runtime\\colyseus.d.ts": {
+    "time": 1637774000870.632,
+    "uuid": "b3d37852-12c5-433f-9b2f-1572b85fabda",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\extensions\\colyseus-sdk\\runtime\\colyseus.js": {
+    "time": 1637774000872.8977,
+    "uuid": "b554cfc3-98f3-4c04-ac8b-fd4ca2621ffb",
+    "missing": false
+  },
+  "D:\\Office\\mmo_movement\\extensions\\colyseus-sdk\\runtime\\colyseus.d.ts.meta": {
+    "time": 1637774000870.632
+  },
+  "D:\\Office\\mmo_movement\\extensions\\colyseus-sdk\\runtime\\colyseus.js.meta": {
+    "time": 1637774000872.8977
   }
 }
